@@ -53,7 +53,7 @@ Customize cabinet.nvim by using the setup function in your Neovim configuration 
 
 ```lua
 require("cabinet").setup({
-  config_directory = vim.fn.stdpath("data") .. "/cabinet"  -- Default path for configuration files
+  config_path = "app"   -- Creates a subfolder at vim.fn.stdpath("data") .. "/cabinet/app"
 })
 ```
 

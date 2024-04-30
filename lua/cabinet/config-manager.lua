@@ -6,8 +6,8 @@ M.config_directory = vim.fn.stdpath("data") .. "/cabinet"
 
 
 function M.setup(options)
-    if options and options.config_directory then
-        M.config_directory = options.config_directory
+    if options and options.config_path then
+        M.config_directory = Path:new(M.config_directory, options.config_path):absolute()
     end
 
     local config_dir = Path:new(M.config_directory)
